@@ -10,26 +10,18 @@ using System.Windows.Forms;
 
 namespace Pet_Shop
 {
-    public partial class Home : Form
+    public partial class ThuCung : Form
     {
-        public Home()
+        public ThuCung()
         {
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void label6_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-
+            Home home = new Home();
+            home.Show();
+            this.Hide();
         }
     }
 }
