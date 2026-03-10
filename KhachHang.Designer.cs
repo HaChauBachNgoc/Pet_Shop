@@ -47,12 +47,12 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataKH = new System.Windows.Forms.DataGridView();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataKH)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -91,6 +91,7 @@
             // Home
             // 
             this.Home.AutoSize = true;
+            this.Home.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Home.Font = new System.Drawing.Font("Segoe UI", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Home.ForeColor = System.Drawing.Color.Snow;
             this.Home.Location = new System.Drawing.Point(35, 0);
@@ -266,27 +267,29 @@
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // dataKH
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(31, 442);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(833, 206);
-            this.dataGridView1.TabIndex = 12;
+            this.dataKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataKH.Location = new System.Drawing.Point(31, 442);
+            this.dataKH.Name = "dataKH";
+            this.dataKH.RowHeadersWidth = 51;
+            this.dataKH.RowTemplate.Height = 24;
+            this.dataKH.Size = new System.Drawing.Size(833, 206);
+            this.dataKH.TabIndex = 12;
+            
             // 
             // KhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 703);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataKH);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Name = "KhachHang";
+            this.Load += new System.EventHandler(this.KhachHang_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -294,7 +297,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataKH)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -318,7 +321,7 @@
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataKH;
         private System.Windows.Forms.Label Home;
         private System.Windows.Forms.Label label7;
     }

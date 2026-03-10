@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataTC = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -52,22 +52,23 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tieude = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTC)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataTC
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(34, 528);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(833, 206);
-            this.dataGridView1.TabIndex = 17;
+            this.dataTC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataTC.Location = new System.Drawing.Point(34, 528);
+            this.dataTC.Name = "dataTC";
+            this.dataTC.RowHeadersWidth = 51;
+            this.dataTC.RowTemplate.Height = 24;
+            this.dataTC.Size = new System.Drawing.Size(833, 206);
+            this.dataTC.TabIndex = 17;
+            this.dataTC.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataTC_CellContentClick);
             // 
             // panel4
             // 
@@ -325,14 +326,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 783);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataTC);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Name = "ThuCung";
             this.Text = "ThuCung";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.ThuCung_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataTC)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -346,7 +348,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataTC;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnXoa;
